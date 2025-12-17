@@ -19,6 +19,10 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+app.MapControllerRoute(
+    name: "StartRoute",
+    pattern: "start",
+    defaults: new { controller = "Home", action = "Index" });
 
 app.MapControllerRoute(
     name: "default",
